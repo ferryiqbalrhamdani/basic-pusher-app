@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    MessageCreated::dispatch('yo yo bro!');
 
     return view('welcome');
+});
+Route::get('/message/created', function() {
+    MessageCreated::dispatch('yo yo bro!');
+
 });
